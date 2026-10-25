@@ -16,4 +16,4 @@ Homebrew 7 requires third-party taps to be trusted before installing.
 
 | Cask | App | Description |
 | --- | --- | --- |
-| `stock-peek` | MacStockWidget | Lightweight stock quotes in the macOS menu bar |
+| `stock-peek` | Stock Peek | Lightweight stock quotes in the macOS menu bar |
