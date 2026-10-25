@@ -17,6 +17,13 @@ cask "stock-peek" do
 
   app "MacStockWidget.app"
 
+  # The app is ad-hoc signed and not notarized, so remove the download
+  # quarantine flag that would otherwise make Gatekeeper block it.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/MacStockWidget.app"]
+  end
+
   zap trash: [
     "~/Library/Preferences/com.ks.macstockwidget.plist",
     "~/Library/Saved Application State/com.ks.macstockwidget.savedState",
