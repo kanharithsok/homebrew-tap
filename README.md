@@ -5,8 +5,12 @@ Homebrew casks for [kanharithsok](https://github.com/kanharithsok)'s apps.
 ## Install
 
 ```bash
-brew install --cask kanharithsok/tap/stock-peek
+brew tap kanharithsok/tap
+brew trust kanharithsok/tap
+brew install --cask stock-peek
 ```
+
+Homebrew 7 requires third-party taps to be trusted before installing.
 
 ## Available casks
 
