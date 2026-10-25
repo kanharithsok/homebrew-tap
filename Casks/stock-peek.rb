@@ -19,7 +19,7 @@ cask "stock-peek" do
 
   # The app is ad-hoc signed and not notarized, so remove the download
   # quarantine flag that would otherwise make Gatekeeper block it.
-  postflight do
+  postflight_steps do
     system_command "/usr/bin/xattr",
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/MacStockWidget.app"]
   end
